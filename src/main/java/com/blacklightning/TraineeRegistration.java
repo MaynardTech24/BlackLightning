@@ -86,6 +86,12 @@ public class TraineeRegistration extends HttpServlet {
 		
 		} catch (Exception e) {
 		    e.printStackTrace();
+
+		    response.setContentType("text/html");
+		    response.getWriter().println("<h2>Registration Error</h2>");
+		    response.getWriter().println("<pre>");
+		    response.getWriter().println(e.toString());
+		    response.getWriter().println("</pre>");
 		}
 		
 	
