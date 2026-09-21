@@ -8,7 +8,7 @@ public class DBConnection {
 
 	private static final String URL =
 	        "jdbc:mariadb://" + System.getenv("MYSQLHOST") + ":"
-	        + System.getenv("MYSQLPORT_TEST") + "/"
+	        		+ System.getenv("MYSQLPORT") + "/"
 	        + System.getenv("MYSQLDATABASE");
 
 	private static final String USER = System.getenv("MYSQLUSER");
