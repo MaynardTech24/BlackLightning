@@ -1,0 +1,1267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Lightning Martial Arts | Fees</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #050d15;
+            --card: #08141f;
+            --red: #ed2436;
+            --white: #f4f7fb;
+            --muted: #b4c1ce;
+            --border: #263746;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+
+        header {
+            background: #07111b;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .navbar {
+            max-width: 1400px;
+            min-height: 78px;
+            margin: auto;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .brand {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 21px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            line-height: 1.2;
+        }
+
+        .brand span {
+            display: block;
+            color: var(--red);
+            font-size: 11px;
+            letter-spacing: 4px;
+            margin-top: 5px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #d7e0e9;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--red);
+        }
+
+        .join-btn {
+            background: var(--red);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .join-btn:hover {
+            background: #c91527;
+            transform: translateY(-2px);
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 65px 8% 55px;
+            border-bottom: 1px solid var(--border);
+            background:
+                linear-gradient(115deg, #0b1926, #050d15 70%);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 450px;
+            right: 8%;
+            top: -100px;
+            transform: rotate(40deg);
+            border-left: 1px solid #1b2b3b;
+            border-right: 35px solid #0c1a28;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .eyebrow {
+            color: #d5dce4;
+            font-size: 12px;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .eyebrow span {
+            display: inline-block;
+            width: 45px;
+            height: 3px;
+            background: var(--red);
+            vertical-align: middle;
+            margin-right: 14px;
+        }
+
+        .hero h1 {
+            font-size: clamp(35px, 5vw, 65px);
+            font-weight: 900;
+            letter-spacing: 3px;
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+
+        .hero h2 {
+            color: #d7e0e9;
+            font-size: clamp(17px, 2.5vw, 27px);
+            font-weight: 400;
+            letter-spacing: 8px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: var(--muted);
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        .hero-line {
+            width: 65px;
+            height: 4px;
+            background: var(--red);
+            margin-top: 25px;
+        }
+
+        /* FEES SECTION */
+
+        .fees-section {
+            max-width: 1400px;
+            margin: auto;
+            padding: 50px 5% 60px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-heading .small-title {
+            color: var(--red);
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        .section-heading h2 {
+            font-size: 30px;
+            margin: 8px 0;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .fee-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+            align-items: stretch;
+        }
+
+        .fee-card {
+            background: linear-gradient(145deg, #0a1723, #050d15);
+            border: 1px solid var(--border);
+            border-radius: 9px;
+            padding: 27px 24px 24px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .fee-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--red);
+        }
+
+        .card-top {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .card-icon {
+            width: 65px;
+            height: 65px;
+            flex-shrink: 0;
+            border: 3px solid var(--red);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 29px;
+        }
+
+        .card-top h3 {
+            font-size: 19px;
+            line-height: 1.3;
+            letter-spacing: 1px;
+        }
+
+        .price {
+            color: var(--red);
+            font-size: 34px;
+            font-weight: 900;
+            line-height: 1.3;
+        }
+
+        .price-label {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .card-divider {
+            height: 1px;
+            background: var(--border);
+            margin-bottom: 18px;
+        }
+
+        .card-description {
+            color: #d2dce6;
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        .card-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .card-features li {
+            color: #d2dce6;
+            font-size: 13px;
+            padding: 7px 0;
+            border-bottom: 1px solid #172634;
+        }
+
+        .card-features li::before {
+            content: "✓";
+            color: var(--red);
+            font-weight: bold;
+            margin-right: 9px;
+        }
+
+        .details-btn {
+            width: 100%;
+            margin-top: auto;
+            padding: 13px 12px;
+            border: 1px solid var(--red);
+            border-radius: 30px;
+            background: transparent;
+            color: var(--white);
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .details-btn:hover {
+            background: var(--red);
+        }
+
+        .details-btn span {
+            margin-left: 8px;
+            font-size: 16px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            max-width: 1250px;
+            margin: auto;
+            padding: 25px 5% 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .footer-line {
+            height: 1px;
+            background: #51606c;
+            flex: 1;
+        }
+
+        .footer-title {
+            font-size: 13px;
+            letter-spacing: 4px;
+        }
+
+        .footer-tagline {
+            color: var(--muted);
+            font-size: 14px;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .copyright {
+            color: #71808d;
+            font-size: 11px;
+            text-align: center;
+            padding: 0 15px 20px;
+        }
+
+        /* DETAILS MODAL */
+
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.82);
+            padding: 20px;
+            overflow-y: auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            width: 100%;
+            max-width: 700px;
+            max-height: 90vh;
+            overflow-y: auto;
+            background: #091622;
+            border: 1px solid #354555;
+            border-radius: 10px;
+            padding: 30px;
+            position: relative;
+            animation: appear 0.25s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .modal-label {
+            color: var(--red);
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+        }
+
+        .modal-content h2 {
+            font-size: 27px;
+            padding-right: 25px;
+            margin-bottom: 8px;
+        }
+
+        .modal-price {
+            color: var(--red);
+            font-size: 30px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .modal-content h3 {
+            color: #fff;
+            font-size: 16px;
+            margin: 22px 0 8px;
+        }
+
+        .modal-content p,
+        .modal-content li {
+            color: #cbd6e0;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .modal-content ul,
+        .modal-content ol {
+            padding-left: 22px;
+        }
+
+        .modal-content li {
+            padding: 3px 0;
+        }
+
+        .modal-content li::marker {
+            color: var(--red);
+        }
+
+        .modal-note {
+            border: 1px solid var(--red);
+            background: #17131a;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .modal-note strong {
+            color: var(--red);
+        }
+
+        .modal-footer {
+            border-top: 1px solid var(--border);
+            margin-top: 25px;
+            padding-top: 18px;
+            color: #dce5ed;
+            font-size: 13px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 1000px) {
+            nav {
+                gap: 15px;
+            }
+
+            .navbar {
+                padding-left: 4%;
+                padding-right: 4%;
+            }
+
+            .fee-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .fee-card:last-child {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 11px;
+            }
+
+            .join-btn {
+                padding: 9px 15px;
+            }
+
+            .hero {
+                padding: 45px 6%;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+                letter-spacing: 1px;
+            }
+
+            .hero h2 {
+                font-size: 16px;
+                letter-spacing: 4px;
+            }
+
+            .eyebrow {
+                font-size: 10px;
+                letter-spacing: 1px;
+            }
+
+            .fee-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .fee-card:last-child {
+                grid-column: auto;
+            }
+
+            .fees-section {
+                padding: 35px 5%;
+            }
+
+            .section-heading h2 {
+                font-size: 25px;
+            }
+
+            footer {
+                gap: 12px;
+            }
+
+            .footer-title {
+                font-size: 11px;
+                letter-spacing: 2px;
+            }
+
+            .footer-tagline {
+                font-size: 12px;
+            }
+
+            .modal-content {
+                padding: 24px 20px;
+            }
+
+            .modal-content h2 {
+                font-size: 22px;
+            }
+        }
+    
+        /* KARATE GI SECTION */
+        .karate-section {
+            background: #050b0d;
+            border-top: 1px solid #26343b;
+            padding: 70px 5%;
+            overflow: hidden;
+        }
+
+        .karate-container {
+            max-width: 1400px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1.15fr 0.85fr;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .karate-label {
+            color: #f1f4f7;
+            letter-spacing: 5px;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .karate-label span {
+            display: inline-block;
+            width: 45px;
+            height: 4px;
+            background: #ed2436;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+
+        .karate-info h2 {
+            font-size: clamp(35px, 4vw, 58px);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .karate-description {
+            color: #c6d0d8;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .karate-feature {
+            display: flex;
+            align-items: center;
+            gap: 17px;
+            margin-bottom: 22px;
+        }
+
+        .feature-icon {
+            width: 58px;
+            height: 58px;
+            flex-shrink: 0;
+            border: 2px solid #ed2436;
+            border-radius: 50%;
+            color: #ed2436;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 27px;
+        }
+
+        .karate-feature h3 {
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .karate-feature p {
+            color: #b9c4ce;
+            font-size: 13px;
+        }
+
+        .karate-values {
+            margin-top: 65px;
+            color: #c6d0d8;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        .karate-values span {
+            color: #ed2436;
+            margin: 0 8px;
+        }
+
+        .values-line {
+            height: 4px;
+            width: 75px;
+            background: #ed2436;
+            margin-top: 15px;
+        }
+
+        .karate-main-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+        }
+
+        .karate-main-image img {
+            width: 100%;
+            max-width: 480px;
+            max-height: 680px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .karate-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .gallery-item img {
+            display: block;
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            border: 1px solid #26343b;
+        }
+
+        .gallery-item p {
+            color: #c6d0d8;
+            font-size: 11px;
+            letter-spacing: 3px;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 1000px) {
+            .karate-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+
+            .karate-main-image {
+                grid-column: 2;
+                grid-row: 1;
+            }
+
+            .karate-gallery {
+                grid-column: 1 / -1;
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 15px;
+            }
+
+            .gallery-item img {
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .karate-section {
+                padding: 45px 6%;
+            }
+
+            .karate-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .karate-main-image {
+                grid-column: auto;
+                grid-row: auto;
+            }
+
+            .karate-main-image img {
+                max-height: 500px;
+            }
+
+            .karate-gallery {
+                grid-column: auto;
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item img {
+                height: 220px;
+            }
+
+            .karate-values {
+                margin-top: 35px;
+                font-size: 10px;
+                letter-spacing: 1px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="navbar">
+
+            <a href="#home" class="brand">
+                BLACK LIGHTNING
+                <span>MARTIAL ARTS</span>
+            </a>
+
+            <nav>
+                <a href="#home" class="active">HOME</a>
+                <a href="#membership">MEMBERSHIP</a>
+                <a href="#training">TRAINING</a>
+                <a href="#karate-gi">UNIFORMS</a>
+                <a href="#fees">FEES</a>
+                <a href="#membership" class="join-btn">JOIN NOW</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                <span></span>
+                DISCIPLINE • SKILL • SELF-DEFENSE • EXCELLENCE
+            </div>
+
+            <h1>BLACK LIGHTNING</h1>
+            <h2>MARTIAL ARTS</h2>
+
+            <p>Train with Discipline. Grow with Excellence.</p>
+
+            <div class="hero-line"></div>
+
+        </div>
+    </section>
+
+    <!-- FEES CARDS -->
+    <main class="fees-section" id="fees">
+
+        <div class="section-heading">
+            <div class="small-title">OUR RATES</div>
+            <h2>Training & Membership Fees</h2>
+            <p>Learn about our membership, training sessions, and official uniforms.</p>
+        </div>
+
+        <div class="fee-grid">
+
+            <!-- MEMBERSHIP CARD -->
+            <article class="fee-card" id="membership">
+
+                <div class="card-top">
+                    <div class="card-icon">♟</div>
+
+                    <div>
+                        <h3>MEMBERSHIP FEE</h3>
+                        <div class="price">₱3,500</div>
+                        <div class="price-label">One-time payment</div>
+                    </div>
+                </div>
+
+                <div class="card-divider"></div>
+
+                <p class="card-description">
+                    Become an official student of Black Lightning Martial Arts
+                    and receive recognition from affiliated martial arts organizations.
+                </p>
+
+                <ul class="card-features">
+                    <li>One-time membership payment</li>
+                    <li>Official student recognition</li>
+                    <li>Membership benefits</li>
+                    <li>Authorized uniform privileges</li>
+                </ul>
+
+                <button class="details-btn" onclick="openModal('membershipModal')">
+                    CLICK TO VIEW DETAILS <span>→</span>
+                </button>
+
+            </article>
+
+            <!-- TRAINING CARD -->
+            <article class="fee-card" id="training">
+
+                <div class="card-top">
+                    <div class="card-icon">⚊</div>
+
+                    <div>
+                        <h3>TRAINING FEE</h3>
+                        <div class="price">₱250</div>
+                        <div class="price-label">Per session</div>
+                    </div>
+                </div>
+
+                <div class="card-divider"></div>
+
+                <p class="card-description">
+                    Training sessions are available to official members
+                    and individuals who want to try martial arts before registering.
+                </p>
+
+                <ul class="card-features">
+                    <li>₱250 per session for members</li>
+                    <li>₱250 per session for trial participants</li>
+                    <li>Try training before membership</li>
+                    <li>Membership fee is separate</li>
+                </ul>
+
+                <button class="details-btn" onclick="openModal('trainingModal')">
+                    CLICK TO VIEW DETAILS <span>→</span>
+                </button>
+
+            </article>
+
+            <!-- UNIFORM CARD -->
+            <article class="fee-card" id="uniforms">
+
+                <div class="card-top">
+                    <div class="card-icon">♧</div>
+
+                    <div>
+                        <h3>UNIFORM PRICE LIST</h3>
+                        <div class="price">₱500–₱1,500</div>
+                        <div class="price-label">Uniforms and organization shirts</div>
+                    </div>
+                </div>
+
+                <div class="card-divider"></div>
+
+                <p class="card-description">
+                    Get the official martial arts uniform and organization
+                    shirts available for Black Lightning Martial Arts members.
+                </p>
+
+                <ul class="card-features">
+                    <li>Karate Gi — ₱1,500</li>
+                    <li>COJUKAP T-Shirt — ₱600</li>
+                    <li>LSMAC T-Shirt — ₱500</li>
+                    <li>Separate from other fees</li>
+                </ul>
+
+                <button class="details-btn" onclick="openModal('uniformModal')">
+                    CLICK TO VIEW DETAILS <span>→</span>
+                </button>
+
+            </article>
+
+        </div>
+    </main>
+
+
+    <!-- KARATE GI SECTION -->
+    <section class="karate-section" id="karate-gi">
+        <div class="karate-container">
+
+            <div class="karate-info">
+                <div class="karate-label"><span></span> UNIFORM</div>
+                <h2>KARATE GI</h2>
+
+                <p class="karate-description">
+                    Our official karate gi is designed for durability,
+                    comfort, and freedom of movement. Made from high-quality,
+                    breathable fabric, it's perfect for both training
+                    and competition.
+                </p>
+
+                <div class="karate-feature">
+                    <div class="feature-icon">▦</div>
+                    <div>
+                        <h3>DURABLE FABRIC</h3>
+                        <p>Built to withstand intense training</p>
+                    </div>
+                </div>
+
+                <div class="karate-feature">
+                    <div class="feature-icon">≋</div>
+                    <div>
+                        <h3>BREATHABLE</h3>
+                        <p>Keeps you cool and comfortable</p>
+                    </div>
+                </div>
+
+                <div class="karate-feature">
+                    <div class="feature-icon">♙</div>
+                    <div>
+                        <h3>FREEDOM OF MOVEMENT</h3>
+                        <p>Flexible and lightweight</p>
+                    </div>
+                </div>
+
+                <div class="karate-values">
+                    DISCIPLINE <span>/</span> CONFIDENCE <span>/</span> RESPECT
+                    <div class="values-line"></div>
+                </div>
+            </div>
+
+            <div class="karate-main-image">
+                <img src="01_whole_karate_gi.jpg" alt="White Karate Gi uniform">
+            </div>
+
+            <div class="karate-gallery">
+                <div class="gallery-item">
+                    <img src="karate-gi-logo.jpg" alt="Karate Gi embroidered logo">
+                    <p>EMBROIDERED LOGO</p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="karate-gi-belt.jpg" alt="Karate Gi belt detail">
+                    <p>DURABLE BELT</p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="karate-gi-stitching.jpg" alt="Karate Gi stitching detail">
+                    <p>QUALITY STITCHING</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-line"></div>
+
+        <div>
+            <div class="footer-title">BLACK LIGHTNING MARTIAL ARTS</div>
+            <div class="footer-tagline">
+                Train with Discipline. Grow with Excellence.
+            </div>
+        </div>
+
+        <div class="footer-line"></div>
+    </footer>
+
+    <div class="copyright">
+        © 2026 Black Lightning Martial Arts. All rights reserved.
+    </div>
+
+
+    <!-- MEMBERSHIP DETAILS MODAL -->
+    <div class="modal" id="membershipModal" role="dialog"
+         aria-modal="true" aria-labelledby="membershipTitle"
+         onclick="closeOutside(event, 'membershipModal')">
+
+        <div class="modal-content">
+
+            <button class="close-btn" onclick="closeModal('membershipModal')"
+                    aria-label="Close">&times;</button>
+
+            <div class="modal-label">BLACK LIGHTNING MARTIAL ARTS</div>
+
+            <h2 id="membershipTitle">MEMBERSHIP FEE</h2>
+            <div class="modal-price">₱3,500</div>
+
+            <p>
+                The Black Lightning Martial Arts membership requires a
+                <strong>one-time payment of ₱3,500</strong> for individuals
+                who wish to become official students of the organization.
+            </p>
+
+            <h3>Membership Benefits</h3>
+
+            <ol>
+                <li>
+                    <strong>One-Time Payment</strong><br>
+                    The membership fee is ₱3,500, payable only once.
+                </li>
+
+                <li>
+                    <strong>Official Student Recognition</strong><br>
+                    Once the membership fee has been paid, you will be
+                    officially recognized as a student of Black Lightning
+                    Martial Arts and its affiliated martial arts organizations.
+                </li>
+            </ol>
+
+            <h3>Affiliated Organizations</h3>
+
+            <ul>
+                <li>Lightning Scientific Arnis International</li>
+                <li>Lightning Scientific Martial Art Culture</li>
+                <li>IKOKS Sonoda</li>
+                <li>Combat Judo-Karate Association of the Philippines</li>
+                <li>PUMA Sikadsu</li>
+            </ul>
+
+            <h3>Authorized Uniform and Organization Shirt</h3>
+
+            <p>
+                Official members are allowed to wear the Karate Gi and the
+                organization's official T-shirt, subject to the organization's
+                rules and guidelines.
+            </p>
+
+            <h3>Trial Training Option — ₱250 Per Session</h3>
+
+            <p>
+                Black Lightning Martial Arts also offers trial training for
+                individuals who want to experience martial arts training
+                before becoming members.
+            </p>
+
+            <ul>
+                <li><strong>Training Fee:</strong> ₱250 per training session.</li>
+                <li><strong>No Immediate Membership Required:</strong> You may attend training without paying the ₱3,500 membership fee immediately.</li>
+                <li><strong>Student Status:</strong> Trial participants are not yet officially recognized as students of the affiliated organizations.</li>
+                <li><strong>Uniform Restrictions:</strong> Trial participants are not allowed to wear the Karate Gi until they become official members.</li>
+            </ul>
+
+            <h3>Choose Your Training Option</h3>
+
+            <p>
+                You may start with trial training for ₱250 per session to
+                experience our training program. If you wish to become an
+                official student and receive the benefits of membership,
+                you may register by paying the one-time membership fee of ₱3,500.
+            </p>
+
+            <div class="modal-footer">
+                BLACK LIGHTNING MARTIAL ARTS<br>
+                Train with Discipline. Grow with Excellence.
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- TRAINING DETAILS MODAL -->
+    <div class="modal" id="trainingModal" role="dialog"
+         aria-modal="true" aria-labelledby="trainingTitle"
+         onclick="closeOutside(event, 'trainingModal')">
+
+        <div class="modal-content">
+
+            <button class="close-btn" onclick="closeModal('trainingModal')"
+                    aria-label="Close">&times;</button>
+
+            <div class="modal-label">BLACK LIGHTNING MARTIAL ARTS</div>
+
+            <h2 id="trainingTitle">TRAINING FEE RATES</h2>
+            <div class="modal-price">₱250 / Session</div>
+
+            <p>
+                The training fee for both members and trial participants
+                is <strong>₱250 per training session</strong>.
+            </p>
+
+            <h3>Training Fee Breakdown</h3>
+
+            <ul>
+                <li>
+                    <strong>Members — ₱250 per session:</strong>
+                    Official members pay ₱250 each time they attend training.
+                </li>
+                <li>
+                    <strong>Trial Participants — ₱250 per session:</strong>
+                    Individuals who want to try martial arts training before
+                    registering for membership also pay ₱250 per session.
+                </li>
+            </ul>
+
+            <div class="modal-note">
+                <strong>NOTE:</strong>
+                <p>
+                    The ₱250 training fee is separate from the ₱3,500 one-time
+                    membership fee. Trial participants are not yet considered
+                    official students and are not allowed to wear the Karate Gi
+                    until they become official members.
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                BLACK LIGHTNING MARTIAL ARTS<br>
+                Train with Discipline. Grow with Excellence.
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- UNIFORM DETAILS MODAL -->
+    <div class="modal" id="uniformModal" role="dialog"
+         aria-modal="true" aria-labelledby="uniformTitle"
+         onclick="closeOutside(event, 'uniformModal')">
+
+        <div class="modal-content">
+
+            <button class="close-btn" onclick="closeModal('uniformModal')"
+                    aria-label="Close">&times;</button>
+
+            <div class="modal-label">BLACK LIGHTNING MARTIAL ARTS</div>
+
+            <h2 id="uniformTitle">UNIFORM PRICE LIST</h2>
+            <div class="modal-price">₱500–₱1,500</div>
+
+            <p>
+                The following are the available uniforms and official
+                organization T-shirts for Black Lightning Martial Arts members.
+            </p>
+
+            <h3>1. Karate Gi — ₱1,500</h3>
+
+            <p>
+                The official martial arts uniform used during training,
+                subject to the organization's guidelines.
+            </p>
+
+            <h3>2. COJUKAP T-Shirt — ₱600</h3>
+
+            <p>
+                The official T-shirt representing the Combat Judo-Karate
+                Association of the Philippines.
+            </p>
+
+            <h3>3. LSMAC T-Shirt — ₱500</h3>
+
+            <p>
+                The official T-shirt representing Lightning Scientific
+                Martial Art Culture.
+            </p>
+
+            <div class="modal-note">
+                <strong>NOTE:</strong>
+                <p>
+                    Uniform and T-shirt prices are separate from the
+                    membership fee and training fee.
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                BLACK LIGHTNING MARTIAL ARTS<br>
+                Train with Discipline. Grow with Excellence.
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+
+            if (modal) {
+                modal.classList.add("show");
+                document.body.style.overflow = "hidden";
+
+                const closeButton = modal.querySelector(".close-btn");
+
+                if (closeButton) {
+                    closeButton.focus();
+                }
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+
+            if (modal) {
+                modal.classList.remove("show");
+                document.body.style.overflow = "";
+            }
+        }
+
+        function closeOutside(event, modalId) {
+            if (event.target.id === modalId) {
+                closeModal(modalId);
+            }
+        }
+
+        // Close the active modal using the Escape key.
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") {
+                document.querySelectorAll(".modal.show").forEach(function(modal) {
+                    closeModal(modal.id);
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
